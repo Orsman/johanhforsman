@@ -14,24 +14,23 @@
 	     
 	<meta http-equiv="content-type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">  
-	<link href="<?php echo get_stylesheet_uri() ?>" media="screen" rel="stylesheet" type="text/css" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />	     
 	<link rel="shortcut icon" href="/favicon.ico" />
 	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
-	<link href='http://fonts.googleapis.com/css?family=Archivo+Black' rel='stylesheet' type='text/css'>	    
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>	    
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-	<header>
-		<div class="page">
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-				<img src="<?php echo esc_url( home_url( '/' ) ) . 'wp-content/themes/johanforsman/images/me-bubble.png'?>" />
+	<div class="wrapper">
+		<header>
+			<div class="page">
 				<div class="site-title">
-					<h1><?php bloginfo( 'name' ); ?></h1>
-					<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+					<a href="<?php bloginfo('url'); ?>">
+						<h1><?php bloginfo( 'name' ); ?></h1>
+						<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+					</a>
 				</div>
-			</a>
-		</div>
-	</header>
+			</div>
+		</header>
 

@@ -7,14 +7,14 @@
             <?php get_sidebar(); ?>
             <div id="content" class="hfeed">
             
-                <p style="margin-bottom:15px;">I build webpages. Mainly in <a href="http://wordpress.org" target="_blank" style="color: #00BCF2; font-weight: bold;">Wordpress</a>. When I’m planning and building sites, my main focus is on three things:</p>
+                <p>I build webpages. Mainly in <a href="http://wordpress.org" target="_blank">Wordpress</a>. When I’m planning and building sites, my main focus is on three things:</p>
                 <ul>
-                    <li><p style="margin-bottom:15px;"><strong>Minimalism.</strong> A lot of webpages today are to flooded with information, banners, commercial, links etc, left and right, for no reason. They have been built with the intention of showing of everything. A company might have many great ideas and products, but if everything is exposed at the same time, it will get the opposite effect. I strongly believe in the good old cliché, <em>“Less is more”</em>.</p></li>
-                    <li><p style="margin-bottom:15px;"><strong>Adaptability.</strong> Due to that web browsing today is made in various browsers and devices it is very important to make the site adaptable. In nerd-terms this is called Responsive Web Design. (Resize this window and you’ll see what I mean).</p></li>
-                    <li><p style="margin-bottom:15px;"><strong>Sexy design.</strong> The site has to be attractive. Using the right colors, graphics and fonts can be quite a hassle BUT is super-important for creating a good first impression and reaching out with your message. The site also has to be easy to navigate or as a friend of mine put it <em>“If the person doesn’t know where to go, he leaves.”</em></p></li>
+                    <li><p><strong>Minimalism.</strong> A lot of webpages today are to flooded with information, banners, commercial, links etc, left and right, for no reason. They have been built with the intention of showing of everything. A company might have many great ideas and products, but if everything is exposed at the same time, it will get the opposite effect. I strongly believe in the good old cliché, <em>“Less is more”</em>.</p></li>
+                    <li><p><strong>Adaptability.</strong> Due to that web browsing today is made in various browsers and devices it is very important to make the site adaptable. In nerd-terms this is called Responsive Web Design. (Resize this window and you’ll see what I mean).</p></li>
+                    <li><p><strong>Sexy design.</strong> The site has to be attractive. Using the right colors, graphics and fonts can be quite a hassle BUT is super-important for creating a good first impression and reaching out with your message. The site also has to be easy to navigate or as a friend of mine put it <em>“If the person doesn’t know where to go, he leaves.”</em></p></li>
                 </ul>
 
-                <p style="margin-bottom:15px;">If you need help with a site, don’t hesitate to contact me and we will sort something out. Just send a mail to <a href="mailto:johan.h.forsman@gmail.com">johan.h.forsman@gmail.com</a>
+                <p>If you need help with a site, don’t hesitate to contact me and we will sort something out. Just send a mail to <a href="mailto:johan.h.forsman@gmail.com">johan.h.forsman@gmail.com</a>
                 <p style="margin-bottom:40px;">Down below are examples of websites I've done.</p>
 
                 <?php the_post(); ?>
