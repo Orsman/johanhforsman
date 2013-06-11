@@ -4,7 +4,6 @@
     <div class="page">
         <div id="content_box">
 
-            <?php get_sidebar(); ?>
             <div id="content" class="hfeed">
                 
 			<article id="post-0" class="post error404 not-found">

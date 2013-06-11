@@ -3,7 +3,7 @@
 <div id="content_area">
  	<div class="page">
 	    <div id="content_box">
-	    	<?php get_sidebar(); ?> 
+
 	    	<div id="content" class="hfeed">
         		<?php global $query_string; ?>
         		<?php if( is_home() ) query_posts ($query_string . '&cat=-3,-5,-6,-9'); ?>

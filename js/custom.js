@@ -16,7 +16,6 @@
         isMobile = true;
       }
 
-      console.log(isMobile);
       // Global variables
       var $siteTitle = $('.site-title');
       var $header = $('header');

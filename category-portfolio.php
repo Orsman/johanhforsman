@@ -4,7 +4,6 @@
     <div class="page">
         <div id="content_box">
 
-            <?php get_sidebar(); ?>
             <div id="content" class="hfeed">
             
                 <p>I build webpages. Mainly in <a href="http://wordpress.org" target="_blank">Wordpress</a>. When I’m planning and building sites, my main focus is on three things:</p>

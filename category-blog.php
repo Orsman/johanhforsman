@@ -3,7 +3,6 @@
 <div id="content_area">
     <div class="page">
         <div id="content_box">
-            <?php get_sidebar(); ?>
             <div id="content" class="hfeed">
 
             	<?php the_post(); ?>

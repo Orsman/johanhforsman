@@ -22,6 +22,28 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+	<input type="checkbox" name="handler-right" class="handler" id="handler-right" onclick="null" />
+
+	<nav class="main-menu">
+		<p id="button">
+        	<label for="handler-right" id="right" href="#"><b></b></label>
+    	</p>
+    </nav>
+    
+    <ul class="menu-list">
+		<?php 
+		$args = array (
+				'orderby' => 'slug',
+				'hide_empty' => 1,
+			);
+		$categories = get_categories($args); 
+		foreach ($categories as $category) {
+			echo '<li class="' . $category->slug.'"'. '>'. '<a href="' . get_category_link($category->term_id). '" ' . '>' . $category->name .'</a></li>';
+		}
+		?>
+	</ul>
+
 	<div class="wrapper">
 		<header>
 			<div class="page">

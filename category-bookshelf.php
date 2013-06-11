@@ -4,12 +4,11 @@
     <div class="page">
         <div id="content_box">
             
-            <?php get_sidebar(); ?>
             <div id="content" class="hfeed">
 
                 <p>For a long time in my life I thought reading was stupid. Sitting all by myself and reading in a book. Seemed like a waste of time. </p>
                 <p>But a few years ago I stumbled upon a list on how to become a good Personal Trainer. I wanted to be that, so I skimmed through the list of 5 books and picked the one that cought my interest the most. <em>How to Win Friends & Influence People by Dale Carnegie</em>. I was hooked and have been reading reguarly ever since. </p>
-                <p>I try to read as much books as possible. Every time I pick up the habit of reading for one-two hour in the morning I realize how important reading is. It's one of those things that can truly transform your life. It always puts me in a great mood and gets me started for a productive day.</p>
+                <p>I try to read as many books as possible. Every time I pick up the habit of reading for one-two hour in the morning I realize how important reading is. It's one of those things that can truly transform your life. It always puts me in a great mood and gets me started for a productive day.</p>
                 <p>Right now I try to read a new book every second week. Down below is a list of the books I've read and what I learned from them in 140 characters. I'll keep adding more as I finnish them.</p>
 
                 <?php query_posts('category_name=bookshelf&showposts=-1&order=DESC'); ?>        
