@@ -1,58 +1,56 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
-<head>
-	<title><?php
-	    if ( is_single() ) { single_post_title(); }       
-	    elseif ( is_home() || is_front_page() ) { bloginfo('description');  print ' | '; bloginfo('name');  }
-	    elseif ( is_category() ) { get_the_category($id); print ' | '; bloginfo('name'); }
-	    elseif ( is_page() ) { single_post_title(''); }
-	    elseif ( is_search() ) { bloginfo('name'); print ' | Search results'; }
-	    elseif ( is_404() ) { print 'Not Found | '; bloginfo('name'); }
-	    else { bloginfo('name'); wp_title('|');  }
-	?></title>
-	     
-	<meta http-equiv="content-type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">  
-	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />	     
-	<link rel="shortcut icon" href="/favicon.ico" />
-	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
-	<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>	    
-	<?php wp_head(); ?>
-</head>
+<!--[if lt IE 7]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--> <html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
 
-<body <?php body_class(); ?>>
+	<head>
+		<meta charset="utf-8">
 
-	<input type="checkbox" name="handler-right" class="handler" id="handler-right" onclick="null" />
+		<!-- Google Chrome Frame for IE -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-	<nav class="main-menu">
-		<p id="button">
-        	<label for="handler-right" id="right" href="#"><b></b></label>
-    	</p>
-    </nav>
-    
-    <ul class="menu-list">
-		<?php 
-		$args = array (
-				'orderby' => 'slug',
-				'hide_empty' => 1,
-			);
-		$categories = get_categories($args); 
-		foreach ($categories as $category) {
-			echo '<li class="' . $category->slug.'"'. '>'. '<a href="' . get_category_link($category->term_id). '" ' . '>' . $category->name .'</a></li>';
-		}
-		?>
-	</ul>
+		<title> <?php wp_title('|', true, 'right'); ?> </title>
+
+		<!-- mobile meta (hooray!) -->
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+		<!-- icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) -->
+		<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/library/images/apple-icon-touch.png">
+		<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
+		<!--[if IE]>
+			<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
+		<![endif]-->
+		<!-- or, set /favicon.ico for IE10 win -->
+		<meta name="msapplication-TileColor" content="#f01d4f">
+		<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/images/win8-tile-icon.png">
+
+		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+
+		<!-- Importing GOOGLE FONTS -->
+		<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:400,800,700|Merriweather:400,700,400italic,700italic|PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>	
+
+		<!-- wordpress head functions -->
+		<?php wp_head(); ?>
+		<!-- end of wordpress head -->
+
+		<!-- drop Google Analytics Here -->
+		<!-- end analytics -->
+
+	</head>
+
+	<body <?php body_class(); ?>>
+
+		<noscript><strong>JavaScript is required for this website to be displayed correctly. Please enable JavaScript before continuing...</strong></noscript>
 
 	<div class="wrapper">
 		<header>
-			<div class="page">
-				<div class="site-title">
-					<a href="<?php bloginfo('url'); ?>">
-						<h1><?php bloginfo( 'name' ); ?></h1>
-						<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-					</a>
-				</div>
+			<div class="header-text">
+					<h1 class="site-title"><a href="<?php bloginfo('url'); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+					<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+				</a>
 			</div>
 		</header>
-

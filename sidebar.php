@@ -1,16 +1,19 @@
+
 <div id="sidebar">
-	<div class="menu">
-		<ul class="categories">
-			<?php 
-			$args = array (
-					'orderby' => 'slug',
-					'hide_empty' => 1,
-				);
-			$categories = get_categories($args); 
-			foreach ($categories as $category) {
-				echo '<li class="' . $category->slug.'"'. '>'. '<a href="' . get_category_link($category->term_id). '" ' . '>' . $category->name .'</a></li>';
-			}
-			?>
-		</ul>
-	</div>
+	<?php if( ! dynamic_sidebar ('main-sidebar') ) :
+
+		 /* In case there isn't an active sidebar, down below is some hardcoded standard functionality */ ?>
+		<aside id="search">
+				
+		</aside>
+
+		<aside id="archives">
+				<aside id="archives" class="widget">
+					<h1 class="widget-title"><?php _e( 'Archives', 'johanforsman' ); ?></h1>
+					<ul>
+						<?php wp_get_archives( array( 'type' => 'monthly' ) ); ?>
+					</ul>
+				</aside>				
+		</aside>
+	<?php endif; ?>
 </div>
