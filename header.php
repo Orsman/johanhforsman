@@ -19,8 +19,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 		<!-- icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) -->
-		<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/library/images/apple-icon-touch.png">
-		<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
+		<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico">
 		<!--[if IE]>
 			<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
 		<![endif]-->
@@ -31,7 +30,7 @@
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
 		<!-- Importing GOOGLE FONTS -->
-		<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:400,800,700|Merriweather:400,700,400italic,700italic|PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>	
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Merriweather:400,700,400italic,700italic|PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>	
 
 		<!-- wordpress head functions -->
 		<?php wp_head(); ?>
@@ -47,6 +46,13 @@
 		<noscript><strong>JavaScript is required for this website to be displayed correctly. Please enable JavaScript before continuing...</strong></noscript>
 
 	<div class="wrapper">
+		<div class="top-fade"></div>
+		<nav>
+			<!-- <span id="menu-icon"></span> -->
+			<li class="menu-label"><a href="<?php echo esc_url( home_url() ); ?>">START</a></li>
+			<li class="menu-label separator">/</li>
+			<li class="menu-label"><a href="<?php echo esc_url( home_url() ); ?>/portfolio">PORTFOLIO</a></li>
+		</nav>
 		<header>
 			<div class="header-text">
 					<h1 class="site-title"><a href="<?php bloginfo('url'); ?>"><?php bloginfo( 'name' ); ?></a></h1>

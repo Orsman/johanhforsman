@@ -33,44 +33,18 @@
 		</div>
 	</section>
 
-	<section class="travel">
-		<div class="page-wrap">
-			<?php $args = array( 'pagename' => 'travel');
-				$travel_query = new WP_query($args);						
-				if ( $travel_query->have_posts() ) :
-					while ( $travel_query->have_posts() ) : $travel_query->the_post(); ?>
-						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-							<div>
-								<?php the_content(); ?>
-							</div>
-						</article> <?php
-					 endwhile;
-				endif; ?>
-			<?php wp_reset_postdata(); ?>
-		</div>
-	</section>
-
 	<section class="portfolio">
 		<div class="page-wrap">
-			<article>
-                <p>I build webpages. Mainly in <a href="http://wordpress.org" target="_blank">Wordpress</a>. Down below are examples of sites I've done</p>
-				<?php $args = array( 'post_type' => 'portfolio-item');
-					$portfolio_query = new WP_query($args);						
-					if ( $portfolio_query->have_posts() ) :
-						while ( $portfolio_query->have_posts() ) : $portfolio_query->the_post(); ?>
-							<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-								<div>
-									<?php the_post_thumbnail(); ?>
-								</div>
-							</article> <?php
-						 endwhile;
-					endif; ?>
-				<?php wp_reset_postdata(); ?>
-			</article>
+
 		</div>
 	</section>
 
 	*/?>
+	<section class="travel">
+		<div class="page-wrap">
+			<h2>Places I've been</h2>
+		</div>
+	</section>
 
 	<section class="tdbid-wrap">
 		<div class="page-wrap">
@@ -113,29 +87,11 @@
                	<p>But...</p>
                	<p>A few years ago I stumbled upon a list on how to become a good Personal Trainer. I wanted to be that, so I skimmed through the list of 5 books and picked the one that cought my interest the most. <em>How to Win Friends & Influence People by Dale Carnegie</em>. I was hooked and have been reading reguarly ever since. </p>
                	<p>I try to read as many books as possible. Every time I pick up the habit of reading for one-two hour in the morning I realize how important reading is. It's one of those things that can truly transform your life. It always puts me in a great mood and gets me started for a productive day.</p>
-               	<p>Right now I try to read a new book every second week. Down below is a list of the books I've read and what I learned from them in 140 characters <em>(Hover/click on books to get the text)</em>. I'll keep adding more as I finnish them.</p>
+               	<p>Right now I try to read a new book every second week. Click on the link below to see the list of books I've read and what I learned from them in 140 characters. I'll keep adding more as I finnish them.</p>
 			</article>
+			<h4 class="aligncenter"><a href="<?php echo esc_url(home_url()) ?>/bookshelf">My bookshelf</a></h4>
 		</div>
-		<div class="book-list">
-			<?php $args = array( 'post_type' => 'book', 'showposts' => '-1');
-				$book_query = new WP_query($args);						
-				if ( $book_query->have_posts() ) :
-					while ( $book_query->have_posts() ) : $book_query->the_post(); ?>
-						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-							<div>
-								<?php the_post_thumbnail(); ?>
-								<div> <?php the_content(); ?> </div>
-								<!--
-								<div class="tool-tip">
-									<?php the_excerpt(); ?>
-								</div>
-									-->
-							</div>
-						</article> <?php
-					 endwhile;
-				endif; ?>
-			<?php wp_reset_postdata(); ?>
-		</div>
+
 	</section>
 
 <?php get_footer(); ?>

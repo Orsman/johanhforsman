@@ -20,6 +20,8 @@
       var $headerText = $('.header-text'),
           $siteTitle = $('.site-title'),
           $header = $('header'),
+          $nav = $('nav'),
+          $topFade = $('.top-fade'),
           windowScroll = 0;
 
       // Identify if visitor has a large enough viewport for parallaxing title
@@ -57,8 +59,17 @@
 
         //Slow scroll of .siteTitle scroll and fade it out
         $headerText.css({
-          'margin-top' : -(windowScroll/4)+"px",
-          'opacity' : 1-(windowScroll/700)
+          'margin-top' : -(windowScroll/3)+"px",
+          'opacity' : 1-(windowScroll/400)
+        });
+
+        //Slowly fade out menu
+        $nav.css({
+          'opacity' : 1-(windowScroll/400)
+        });
+
+        $topFade.css({
+          'opacity' : 1-(windowScroll/400)
         });
 
         //Slowly parallax the background of Header
@@ -81,15 +92,6 @@
         $('html, body').animate( {scrollTop: 0} , 600);
         return false;
       });
-
-      // Show tool-tip when hovering over books
-      $('.book').mouseenter(function() {
-        $(this).find('.tool-tip').fadeIn();
-      });
-      $('.book').mouseleave(function() {
-        $(this).find('.tool-tip').fadeOut();
-      });
-
     });
 
 }(jQuery));
